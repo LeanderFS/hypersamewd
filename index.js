@@ -15,7 +15,7 @@ exports.middleware = (store) => (next) => async (action) => {
         case 'TERM_GROUP_REQUEST': {
             const { activeUid, sessions } = store.getState().sessions;
             if (activeUid) {
-                await setCwd(store.dispatch, sessions[activeUid]);   
+                await setCwd(store.dispatch, sessions[activeUid].pid);
             }
             break;
         }
