@@ -1,12 +1,15 @@
 {
-  "name": "hypersamewd",
+  "name": "hyper-samewd",
   "version": "1.0.0",
+  "author": "Leander Huysse <leander@iolabs.nl>",
+  "main": "index.js",
   "keywords": [
     "hyper",
     "hyper.app",
     "hyper-plugin"
   ],
   "description": "Maintains current working directory when opening a new tab",
+  "license": "ISC",
   "dependencies": {
     "pid-cwd": "^1.1.1"
   }
