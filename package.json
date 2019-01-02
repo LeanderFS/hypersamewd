@@ -1,0 +1,13 @@
+{
+  "name": "hypersamewd",
+  "version": "1.0.0",
+  "keywords": [
+    "hyper",
+    "hyper.app",
+    "hyper-plugin"
+  ],
+  "description": "Maintains current working directory when opening a new tab",
+  "dependencies": {
+    "pid-cwd": "^1.1.1"
+  }
+}
