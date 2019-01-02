@@ -1,6 +1,6 @@
 {
   "name": "hyper-samewd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Leander Huysse <leander@iolabs.nl>",
   "main": "index.js",
   "repository": {
