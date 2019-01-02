@@ -12,13 +12,13 @@ const setCwd = async (dispatch, pid) => {
 exports.middleware = (store) => (next) => async (action) => {
     switch (action.type) {
         case 'SESSION_REQUEST':
-        case 'TERM_GROUP_REQUEST':
-            if (store.getState().sessions.activeUid) {
-                const { activeUid } = store.getState().sessions;
-                const { pid } = store.getState().sessions.sessions[activeUid];
-                await setCwd(store.dispatch, pid);   
+        case 'TERM_GROUP_REQUEST': {
+            const { activeUid, sessions } = store.getState().sessions;
+            if (activeUid) {
+                await setCwd(store.dispatch, sessions[activeUid]);   
             }
             break;
+        }
         default:
             break;
     }
