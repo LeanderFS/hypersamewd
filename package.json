@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "author": "Leander Huysse <leander@iolabs.nl>",
   "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/LeanderFS/hypersamewd.git"
+  },
   "keywords": [
     "hyper",
     "hyper.app",
     "hyper-plugin"
   ],
   "description": "Maintains current working directory when opening a new tab",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "pid-cwd": "^1.1.1"
   }
