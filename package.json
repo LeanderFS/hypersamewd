@@ -1,11 +1,11 @@
 {
   "name": "hyper-samewd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Leander Huysse <leander@iolabs.nl>",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/LeanderFS/hypersamewd.git"
+    "type": "git",
+    "url": "https://github.com/LeanderFS/hypersamewd.git"
   },
   "keywords": [
     "hyper",
