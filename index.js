@@ -9,32 +9,30 @@ const setCwd = async (dispatch, pid) => {
     });
 }
 
-let config;
-exports.middleware = (store) => (next) => async (action) => {
+let hyperwdConfig;
+exports.middleware = ({ getState, dispatch }) => (next) => async (action) => {
     switch (action.type) {
         case 'CONFIG_RELOAD':
-        case 'CONFIG_LOAD':
-            config = action.config.hyperwd || {};
+        case 'CONFIG_LOAD': {
+            hyperwdConfig = action.config.hyperwd || {};
+            break;
+        }
         case 'SESSION_REQUEST':
         case 'TERM_GROUP_REQUEST': {
-            const { activeUid, sessions } = store.getState().sessions;
+            const { activeUid, sessions } = getState().sessions;
             if (activeUid) {
-                await setCwd(store.dispatch, sessions[activeUid].pid);
+                await setCwd(dispatch, sessions[activeUid].pid);
             }
             break;
         }
         case 'INIT':
-            if (config.initialWorkingDirectory) {
-                store.dispatch({
+            if (hyperwdConfig.initialWorkingDirectory) {
+                dispatch({
                     type: 'SESSION_SET_CWD',
-                    cwd: config.initialWorkingDirectory,
+                    cwd: hyperwdConfig.initialWorkingDirectory,
                 });
-            }     
-        default:
+            }
             break;
     }
-
     next(action);
 };
-
-
