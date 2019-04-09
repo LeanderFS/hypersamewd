@@ -1,6 +1,6 @@
 {
   "name": "hyper-samewd",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "author": "Leander Huysse <leander@iolabs.nl>",
   "main": "index.js",
   "repository": {
@@ -15,6 +15,6 @@
   "description": "Maintains current working directory when opening a new tab",
   "license": "GPL-3.0",
   "dependencies": {
-    "pid-cwd": "^1.1.1"
+    "pid-cwd": "^1.2.0"
   }
 }
